@@ -1,12 +1,11 @@
 {
   "name": "just-content",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "View a web page without adds and unique/cluttered UIs. Just schema presented in a user-friendly way.",
+  "main": "./astro/src/pages/view.astro",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cd astro && pnpm run dev",
+    "main": "cd astro && pnpm run build"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT"
 }

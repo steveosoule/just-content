@@ -1,6 +1,6 @@
 # just-content
 
-Web Browsing with Just the Content You Want
+View a web page without adds and unique/cluttered UIs. Just schema presented in a user-friendly way.
 
 ## API
 
