@@ -10,12 +10,12 @@ Web Browsing with Just the Content You Want
 
 ##### JSON Schema
 
-- http://localhost:3000/api/recipe.json?url=https://ballerinafarm.com/blogs/recipes/ballerina-farm-sourdough-bread
-- http://localhost:3000/api/recipe.json?url=https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara
-- http://localhost:3000/api/recipe.json?url=https://tastesbetterfromscratch.com/german-pancakes-2/
-- http://localhost:3000/api/recipe.json?url=http://www.mccormick.com/Recipes/Soups-Stews/Corn-and-Potato-Chowder
-- http://localhost:3000/api/recipe.json?url=https://www.tasteofhome.com/recipes/buffalo-chicken-dip/
-- http://localhost:3000/api/recipe.json?url=https://www.food.com/recipe/skyline-chili-dip-87361
+- http://localhost:3000/view?url=https://ballerinafarm.com/blogs/recipes/ballerina-farm-sourdough-bread
+- http://localhost:3000/view?url=https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara
+- http://localhost:3000/view?url=https://tastesbetterfromscratch.com/german-pancakes-2/
+- http://localhost:3000/view?url=http://www.mccormick.com/Recipes/Soups-Stews/Corn-and-Potato-Chowder
+- http://localhost:3000/view?url=https://www.tasteofhome.com/recipes/buffalo-chicken-dip/
+- http://localhost:3000/view?url=https://www.food.com/recipe/skyline-chili-dip-87361
 
 #### Invalid
 
