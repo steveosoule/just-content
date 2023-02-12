@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@astrojs/vue": "^2.0.1",
 		"astro": "^2.0.10",
+		"node-html-parser": "^6.1.4",
 		"vue": "^3.2.30"
 	}
 }
