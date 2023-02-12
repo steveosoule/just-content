@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchForm from '../components/SearchForm.astro';
+import Recipe from '../components/Recipe.astro';
+
+const url = Astro.url.searchParams.get('url')! || '';
+const response = await fetch(`http://localhost:3000/api/recipe.json?url=${url}`);
+const data = await response.json();
+const recipe = data.recipes[0];
+---
+
+
+<Layout title="View a page">
+	<main>
+		<SearchForm url={url}></SearchForm>
+		<Recipe recipe={recipe} url={url}></Recipe>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 80vw;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+</style>
