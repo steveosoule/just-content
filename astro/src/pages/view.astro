@@ -3,8 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import SearchForm from '../components/SearchForm.astro';
 import Recipe from '../components/Recipe.astro';
 
-const url = Astro.url.searchParams.get('url')! || '';
-const response = await fetch(`http://localhost:3000/api/recipe.json?url=${url}`);
+const recipeUrl = Astro.url.searchParams.get('url')! || '';
+const apiUrl = new URL(`/api/recipe.json?url=${recipeUrl}`, Astro.url.origin);
+const response = await fetch(apiUrl);
 const data = await response.json();
 const recipe = data.recipes[0];
 ---
@@ -12,8 +13,8 @@ const recipe = data.recipes[0];
 
 <Layout title="View a page">
 	<main>
-		<SearchForm url={url}></SearchForm>
-		<Recipe recipe={recipe} url={url}></Recipe>
+		<SearchForm url={recipeUrl}></SearchForm>
+		<Recipe recipe={recipe} url={recipeUrl}></Recipe>
 	</main>
 </Layout>
 
