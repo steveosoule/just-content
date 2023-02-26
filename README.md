@@ -22,3 +22,10 @@ View a web page without adds and unique/cluttered UIs. Just schema presented in 
 - http://localhost:3000/api/recipe.json?url=https://www.foodnetwork.com/recipes/food-network-kitchen/gatorade-margarita-3757681
 - http://localhost:3000/api/recipe.json?url=https://www.allrecipes.com/recipe/68461/buffalo-chicken-dip/
 - http://localhost:3000/api/recipe.json?url=https://cookpad.com/us/recipes/16726986-buttermilk-banana-bread-or-muffins
+
+
+## Site
+
+- **Admin URL:** https://app.netlify.com/sites/just-content
+- **URL:** https://just-content.netlify.app
+- **Site ID:** `8c4c125e-95c4-4b65-9e80-87aeb5dea117`
