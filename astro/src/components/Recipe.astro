@@ -10,25 +10,33 @@ const { recipe, url  } = Astro.props;
 ---
 
 <article>
-	<h1>{recipe.name}</h1>
-	{recipe?.publisher?.name?.length ? <p>from <a href={url} target="_blank">{recipe.publisher.name}</a></p> : ''}
-	<img src={recipe.image} width="200" alt="">
-	<p>{recipe.recipeYield}</p>
-	<p>{recipe.totalTime}</p>
-	<h2>Ingredients</h2>
-	<ul>
-		{recipe.recipeIngredient.map((ingredient) => (
-			<li set:html={ingredient}></li>
-		))}
-	</ul>
-	<h2>Directions</h2>
-	<ol>
-		{recipe.recipeInstructions.map((step) => (
-			<li set:html={step.text}></li>
-		))}
-	</ol>
-	<!-- <pre>{JSON.stringify(recipe)}</pre> -->
+	<div class="row">
+		<div class="col-md-6">
+			<h1>{recipe.name}</h1>
+			{recipe?.publisher?.name?.length ? <p>from <a href={url} target="_blank">{recipe.publisher.name}</a></p> : ''}
+			<p>{recipe?.recipeYield?.length ? `Servings: ${recipe.recipeYield}` : ''}</p>
+			<p>{recipe?.totalTime?.length ? `Time: ${recipe.totalTime}` : ''}</p>
+		</div>
+		<div class="col-md-6">
+			<img src={recipe.image} alt="" class="rounded img-fluid">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Ingredients</h2>
+			<ul>
+				{recipe.recipeIngredient.map((ingredient) => (
+					<li set:html={ingredient}></li>
+				))}
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<h2>Directions</h2>
+			<ol>
+				{recipe.recipeInstructions.map((step) => (
+					<li set:html={step.text}></li>
+				))}
+			</ol>
+		</div>
+	</div>
 </article>
-
-<style>
-</style>
