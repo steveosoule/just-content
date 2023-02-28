@@ -30,6 +30,7 @@ import SearchForm from '../components/SearchForm.astro';
 				</p>
 				<SearchForm></SearchForm>
 				<slot />
+				<pre id="share-content"></pre>
 			</div>
 		</main>
 	</body>
@@ -59,4 +60,11 @@ import SearchForm from '../components/SearchForm.astro';
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('/service-worker.js');
 	}
+
+	window.addEventListener('DOMContentLoaded', () => {
+		let output = JSON.stringify(window.location, null, '\t');
+		output += JSON.stringify(new URL(window.location).searchParams, null, '\t');
+		document.getElementById('share-content').innerHTML = output;
+		
+	});
 </script>

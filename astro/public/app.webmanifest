@@ -13,7 +13,7 @@
 		}
 	],
 	"share_target": {
-		"action": "/view",
+		"action": "/",
 		"method": "GET",
 		"params": {
 			"title": "title",
