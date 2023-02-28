@@ -1,0 +1,8 @@
+{
+	"name": "Just Content!",
+	"short_name": "Just Content!",
+	"start_url": "/",
+	"theme_color": "#da62c4",
+	"background_color": "#ffffff",
+	"display": "standalone"
+ }
