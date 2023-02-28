@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -11,15 +12,18 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/icons/play_store_512.png" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="manifest" href="/app.webmanifest">
+		<meta name="theme-color" content="#da62c4">
+		<link rel="apple-touch-icon" href="/icons/play_store_512.png">
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
@@ -34,3 +38,10 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
+
+<script>
+	if ('serviceWorker' in navigator) {
+		console.log('has worker')
+		navigator.serviceWorker.register('/service-worker.js');
+	}
+</script>
