@@ -6,6 +6,7 @@ specifiers:
   astro: ^2.0.15
   bootstrap: ^5.2.3
   node-html-parser: ^6.1.4
+  tinyduration: ^3.2.4
   vue: ^3.2.30
 
 dependencies:
@@ -14,6 +15,7 @@ dependencies:
   astro: 2.0.15
   bootstrap: 5.2.3
   node-html-parser: 6.1.4
+  tinyduration: 3.2.4
   vue: 3.2.47
 
 packages:
@@ -3215,6 +3217,10 @@ packages:
     dependencies:
       globalyzer: 0.1.0
       globrex: 0.1.2
+    dev: false
+
+  /tinyduration/3.2.4:
+    resolution: {integrity: sha512-LkcGUKYZiFG+J8ydqEaxLenVacAKgdUajDAv9FhZpAx6xiVQOUSk48/Y1BHxybkRh2X1LOw9/vyvwU6WmOQ92g==}
     dev: false
 
   /to-fast-properties/2.0.0:

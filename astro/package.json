@@ -15,6 +15,7 @@
 		"astro": "^2.0.15",
 		"bootstrap": "^5.2.3",
 		"node-html-parser": "^6.1.4",
+		"tinyduration": "^3.2.4",
 		"vue": "^3.2.30"
 	}
 }

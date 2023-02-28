@@ -7,15 +7,24 @@ export interface Props {
 const { recipe, url  } = Astro.props;
 // https://docs.astro.build/en/core-concepts/astro-components/
 // https://docs.astro.build/en/reference/directives-reference/
+
+// https://www.npmjs.com/package/tinyduration
+import * as td from 'tinyduration';
+recipe.totalTimeDuration = recipe?.totalTime?.length ? td.parse(recipe.totalTime) : '';
+recipe.totalTimeFormatted = `${
+	recipe?.totalTimeDuration?.hours ? `${recipe.totalTimeDuration.hours} hours ` : '' +
+	recipe?.totalTimeDuration?.minutes ? `${recipe.totalTimeDuration.minutes} minutes` : ''
+}`
+
 ---
 
 <article>
 	<div class="row">
 		<div class="col-md-6">
 			<h1>{recipe.name}</h1>
-			{recipe?.publisher?.name?.length ? <p>from <a href={url} target="_blank">{recipe.publisher.name}</a></p> : ''}
-			<p>{recipe?.recipeYield?.length ? `Servings: ${recipe.recipeYield}` : ''}</p>
-			<p>{recipe?.totalTime?.length ? `Time: ${recipe.totalTime}` : ''}</p>
+			{recipe?.publisher?.name?.length ? <div><b>From:</b> <a href={url} target="_blank">{recipe.publisher.name}</a></div> : ''}
+			{recipe?.recipeYield?.length ? <div><b>Servings:</b> {recipe.recipeYield}</div> : ''}
+			{recipe?.totalTime?.length ? <div><b>Time:</b> {recipe.totalTimeFormatted}</div> : ''}
 		</div>
 		<div class="col-md-6">
 			<img src={recipe.image} alt="" class="rounded img-fluid">
