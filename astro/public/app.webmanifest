@@ -1,0 +1,15 @@
+{
+	"name": "Just Content!",
+	"short_name": "Just Content!",
+	"start_url": "/",
+	"theme_color": "#da62c4",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "icons/play_store_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
