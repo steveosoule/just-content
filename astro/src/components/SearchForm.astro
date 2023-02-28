@@ -4,12 +4,29 @@ export interface Props {
 }
 
 const { url  } = Astro.props;
+
+const recipeUrl = url || Astro.url.searchParams.get('url') || '';
+
 ---
 
 <form method="get" action="/view">
-	<input type="url" name="url" placeholder="https://www.example.com/foobar.html" value={url}>
-	<button>Go</button>
+	<div class="input-group form-floating mb-3">
+		<input type="url" name="url" class="form-control" placeholder="https://www.example.com/recipe.html" value={recipeUrl}>
+		<button type="button" class="btn bg-transparent clear-btn" style="margin-left: -40px; z-index: 100;" title="Clear search input">
+			&times;
+		</button>
+		<label>URL:</label>
+		<button class="btn btn-primary">Go</button>
+	</div>
 </form>
 
-<style>
-</style>
+
+<script>
+	const clearBtn = document.querySelector('.clear-btn');
+	const input = document.querySelector('input[type="url"]');
+	
+	clearBtn.addEventListener('click', () => {
+		input.value = '';
+		window.location = document.location.origin;
+	})
+</script>
