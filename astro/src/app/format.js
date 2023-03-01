@@ -11,7 +11,7 @@ export const invalidlyEncodedString = (value) => {
 }
 
 export const cleanString = (value) => {
-	value = String(value);
+	value = String(value).trim();
 	value = invalidlyEncodedString(value);
 	value = striptags(value, '<a>');
 
@@ -36,7 +36,11 @@ export const recipe = (recipe) => {
 		return step;
 	});
 
-	recipe.recipeIngredient = recipe.recipeIngredient.map(cleanString);
+	recipe.recipeInstructions.filter(step => {
+		return step?.text?.length;
+	})
+
+	recipe.recipeIngredient = recipe.recipeIngredient.map(cleanString).filter(ingredient => ingredient?.length);
 
 	if (Array.isArray(recipe.image) && recipe.image.length && typeof recipe.image[0] === 'string'){
 		recipe._image = recipe.image;
