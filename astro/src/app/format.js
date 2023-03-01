@@ -3,8 +3,19 @@ import * as td from 'tinyduration';
 
 import {decode} from 'html-entities';
 
+import striptags from 'striptags';
+
+
 export const invalidlyEncodedString = (value) => {
 	return decode(String(value).replace('&amp;nbsp;', '&nbsp;'));
+}
+
+export const cleanString = (value) => {
+	value = String(value);
+	value = invalidlyEncodedString(value);
+	value = striptags(value, '<a>');
+
+	return value;
 }
 
 export const recipe = (recipe) => {
@@ -21,11 +32,11 @@ export const recipe = (recipe) => {
 	}
 
 	recipe.recipeInstructions = recipe.recipeInstructions.map(step => {
-		step.text = invalidlyEncodedString(step.text);
+		step.text = cleanString(step.text);
 		return step;
 	});
 
-	recipe.recipeIngredient = recipe.recipeIngredient.map(invalidlyEncodedString);
+	recipe.recipeIngredient = recipe.recipeIngredient.map(cleanString);
 
 	if (Array.isArray(recipe.image) && recipe.image.length && typeof recipe.image[0] === 'string'){
 		recipe._image = recipe.image;

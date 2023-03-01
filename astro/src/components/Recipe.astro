@@ -27,7 +27,7 @@ const { recipe, url  } = Astro.props;
 			<h2>Ingredients</h2>
 			<ul>
 				{recipe.recipeIngredient.map((ingredient) => (
-					<li set:text={ingredient}></li>
+					<li set:html={ingredient}></li>
 				))}
 			</ul>
 		</div>
@@ -35,7 +35,7 @@ const { recipe, url  } = Astro.props;
 			<h2>Directions</h2>
 			<ol>
 				{recipe.recipeInstructions.map((step) => (
-					<li set:text={step.text}></li>
+					<li set:html={step.text}></li>
 				))}
 			</ol>
 		</div>

@@ -16,6 +16,7 @@
 		"bootstrap": "^5.2.3",
 		"html-entities": "^2.3.3",
 		"node-html-parser": "^6.1.4",
+		"striptags": "^3.2.0",
 		"tinyduration": "^3.2.4",
 		"vue": "^3.2.30"
 	}
