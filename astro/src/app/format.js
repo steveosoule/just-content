@@ -14,5 +14,10 @@ export const recipe = (recipe) => {
 		});
 	}
 
+	if (Array.isArray(recipe.image) && recipe.image.length && typeof recipe.image[0] === 'string'){
+		recipe._image = recipe.image;
+		recipe.image = recipe.image[0];
+	}
+
 	return recipe;
 }

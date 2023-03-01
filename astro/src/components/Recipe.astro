@@ -39,6 +39,13 @@ const { recipe, url  } = Astro.props;
 				))}
 			</ol>
 		</div>
-		
+		<!-- <pre set:text={JSON.stringify(recipe, '', '\t')}></pre>		 -->
 	</div>
 </article>
+
+<style>
+	img {
+		object-fit: cover;
+		aspect-ratio: 16 / 9;
+	}
+</style>
