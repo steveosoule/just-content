@@ -18,7 +18,7 @@ export const cleanString = (value) => {
 	return value;
 }
 
-export const recipe = (recipe) => {
+export const recipe = (recipe = {}) => {
 	recipe.totalTimeDuration = recipe?.totalTime?.length ? td.parse(recipe.totalTime) : '';
 	recipe.totalTimeFormatted = `${
 		recipe?.totalTimeDuration?.hours ? `${recipe.totalTimeDuration.hours} hours ` : '' +

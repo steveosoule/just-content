@@ -9,10 +9,10 @@ const recipeUrl = Astro.url.searchParams.get('url') ?? Astro.url.searchParams.ge
 const apiUrl = new URL(`/api/recipe.json?url=${recipeUrl}`, Astro.url.origin);
 const response = await fetch(apiUrl);
 const data = await response.json();
-const recipe = format.recipe(data.recipes[0]);
+const recipe = data.recipes.length ? format.recipe(data.recipes[0]) : null;
 ---
 
 
 <Layout title="Just Content! | View Recipe">
-	<Recipe recipe={recipe} url={recipeUrl}></Recipe>
+	{recipe ? <Recipe recipe={recipe} url={recipeUrl}></Recipe> : <div class="alert alert-secondary" role="alert">Recipe not found</div>}
 </Layout>
