@@ -5,6 +5,7 @@ specifiers:
   '@astrojs/vue': ^2.0.1
   astro: ^2.0.15
   bootstrap: ^5.2.3
+  html-entities: ^2.3.3
   node-html-parser: ^6.1.4
   tinyduration: ^3.2.4
   vue: ^3.2.30
@@ -14,6 +15,7 @@ dependencies:
   '@astrojs/vue': 2.0.1_astro@2.0.15+vue@3.2.47
   astro: 2.0.15
   bootstrap: 5.2.3
+  html-entities: 2.3.3
   node-html-parser: 6.1.4
   tinyduration: 3.2.4
   vue: 3.2.47
@@ -1968,6 +1970,10 @@ packages:
   /he/1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
+    dev: false
+
+  /html-entities/2.3.3:
+    resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
     dev: false
 
   /html-escaper/3.0.3:

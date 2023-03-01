@@ -1,6 +1,12 @@
 // https://www.npmjs.com/package/tinyduration
 import * as td from 'tinyduration';
 
+import {decode} from 'html-entities';
+
+export const invalidlyEncodedString = (value) => {
+	return decode(String(value).replace('&amp;nbsp;', '&nbsp;'));
+}
+
 export const recipe = (recipe) => {
 	recipe.totalTimeDuration = recipe?.totalTime?.length ? td.parse(recipe.totalTime) : '';
 	recipe.totalTimeFormatted = `${
@@ -13,6 +19,13 @@ export const recipe = (recipe) => {
 			return { text: instruction};
 		});
 	}
+
+	recipe.recipeInstructions = recipe.recipeInstructions.map(step => {
+		step.text = invalidlyEncodedString(step.text);
+		return step;
+	});
+
+	recipe.recipeIngredient = recipe.recipeIngredient.map(invalidlyEncodedString);
 
 	if (Array.isArray(recipe.image) && recipe.image.length && typeof recipe.image[0] === 'string'){
 		recipe._image = recipe.image;
