@@ -5,7 +5,9 @@ specifiers:
   '@astrojs/vue': ^2.0.1
   astro: ^2.0.15
   bootstrap: ^5.2.3
+  html-entities: ^2.3.3
   node-html-parser: ^6.1.4
+  striptags: ^3.2.0
   tinyduration: ^3.2.4
   vue: ^3.2.30
 
@@ -14,7 +16,9 @@ dependencies:
   '@astrojs/vue': 2.0.1_astro@2.0.15+vue@3.2.47
   astro: 2.0.15
   bootstrap: 5.2.3
+  html-entities: 2.3.3
   node-html-parser: 6.1.4
+  striptags: 3.2.0
   tinyduration: 3.2.4
   vue: 3.2.47
 
@@ -1970,6 +1974,10 @@ packages:
     hasBin: true
     dev: false
 
+  /html-entities/2.3.3:
+    resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
+    dev: false
+
   /html-escaper/3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
     dev: false
@@ -3167,6 +3175,10 @@ packages:
   /strip-final-newline/3.0.0:
     resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
     engines: {node: '>=12'}
+    dev: false
+
+  /striptags/3.2.0:
+    resolution: {integrity: sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw==}
     dev: false
 
   /suf-log/2.5.3:

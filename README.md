@@ -29,3 +29,19 @@ View a web page without adds and unique/cluttered UIs. Just schema presented in 
 - **Admin URL:** https://app.netlify.com/sites/just-content
 - **URL:** https://just-content.netlify.app
 - **Site ID:** `8c4c125e-95c4-4b65-9e80-87aeb5dea117`
+
+## Todo
+
+- Recipe
+	- [ ] Cook & Prep time output
+	- [ ] localStorage of recent recipe list displayed on homepage
+	- [ ] Parse microdata
+	- [ ] Parse no schema
+	- [ ] Request caching
+	- [ ] User login
+	- [ ] Save recipe to user list
+	- [ ] Serving size adjustment
+	- [ ] Tooltip ingredient amount in instructions
+- Other schema
+	- News
+	- Product
